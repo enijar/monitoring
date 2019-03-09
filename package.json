@@ -1,13 +1,11 @@
 {
   "name": "monitoring",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Basic website SSL and uptime monitoring.",
   "scripts": {
+    "start": "node src/main",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
   "dependencies": {
     "superagent": "^4.1.0"
