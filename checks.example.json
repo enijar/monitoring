@@ -1,0 +1,17 @@
+{
+  "requests": [
+    {
+      "url": "https://example.com",
+      "status": 200,
+      "maxResponseTime": 1500,
+      "interval": 10000
+    }
+  ],
+  "notifications": {
+    "slack": {
+      "channel": "#monitoring",
+      "username": "monitoring-bot",
+      "channelWebhookURL": ""
+    }
+  }
+}
