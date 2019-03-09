@@ -76,19 +76,11 @@ const STATE = {
     // success notification is sent and another error occurs.
     if (result.ssl) {
       if (!result.ssl.ok && STATE.checked[request.url].notifications.status.ok) {
-        try {
-          await notify(result.ssl.errorMessage, notifications);
-        } catch (err) {
-          console.error(err.message);
-        }
+        notify(result.ssl.errorMessage, notifications);
       }
 
       if (result.ssl.ok && !STATE.checked[request.url].notifications.status.ok) {
-        try {
-          await notify(result.ssl.okMessage, notifications);
-        } catch (err) {
-          console.error(err.message);
-        }
+        notify(result.ssl.okMessage, notifications);
       }
 
       STATE.checked[request.url].notifications.status.ok = result.ssl.ok;
@@ -96,19 +88,11 @@ const STATE = {
 
     if (result.status) {
       if (!result.status.ok && STATE.checked[request.url].notifications.status.ok) {
-        try {
-          await notify(result.status.errorMessage, notifications);
-        } catch (err) {
-          console.error(err);
-        }
+        notify(result.status.errorMessage, notifications);
       }
 
       if (result.status.ok && !STATE.checked[request.url].notifications.status.ok) {
-        try {
-          await notify(result.status.okMessage, notifications);
-        } catch (err) {
-          console.error(err);
-        }
+        notify(result.status.okMessage, notifications);
       }
 
       STATE.checked[request.url].notifications.status.ok = result.status.ok;
