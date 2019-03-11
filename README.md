@@ -10,6 +10,12 @@ Setup `checks.json` file.
 cp checks.example.json checks.json
 ```
 
+Install dependencies.
+
+```bash
+npm install
+```
+
 ### Setup Slack Notifications
 
 Add a [webhook configuration](https://phillipcraig.slack.com/apps/A0F7XDUAZ-incoming-webhooks) to your workspace, then
